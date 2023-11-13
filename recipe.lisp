@@ -15,7 +15,10 @@
 |#
 
 ;;declaration
-
+#|
+(setf a 1783)
+(let ((var 1783)) (format nil "~a" var))
+|#
 ;;print
 #|
 (print "Hello World")
