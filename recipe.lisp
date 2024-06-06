@@ -46,7 +46,7 @@
 (format nil "~(~a~)" "HELLO")
 |#
 
-;;scan
+;;I/O
 #|
 (read-line var)
 
@@ -73,4 +73,4 @@ while line do (format t "~a~%" line))
 
 ;;if
 
-;;loop
+;;iteration
