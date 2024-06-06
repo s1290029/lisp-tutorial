@@ -1,4 +1,4 @@
-;;This is recipe of lisp program
+;;;;This is recipe of lisp program
 
 ;;comment
 #|
@@ -11,6 +11,7 @@
 (- 1783 813)
 (* 1783 813)
 (/ 1783 813)
+(mod 1783 813)
 (expt 2 5)
 |#
 
@@ -18,7 +19,10 @@
 #|
 (setf a 1783)
 (let ((var 1783)) (format nil "~a" var))
+(defparameter *reset* 0) ;This must be initialize
+(defvar *no-reset* 0)    ;This must not be initialize
 |#
+
 ;;print
 #|
 (print "Hello World")
