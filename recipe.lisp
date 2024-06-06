@@ -13,14 +13,18 @@
 (/ 1783 813)
 (mod 1783 813)
 (expt 2 5)
+(= 1783 813)
+(> 1783 813)
+(< 1783 813)
 |#
 
 ;;declaration
 #|
-(setf a 1783)
 (let ((var 1783)) (format nil "~a" var))
 (defparameter *reset* 0) ;This must be initialize
 (defvar *no-reset* 0)    ;This must not be initialize
+(defconstant *constant* 1783) ;This cannot be changed
+(setf var 1783)
 |#
 
 ;;print
@@ -74,7 +78,23 @@ while line do (format t "~a~%" line))
 |#
 
 ;;and or not
+#|
+(not nil)
+(and (= 1783 1783) (= 813 813))
+(or (= 1783 1783) (= 1783 813))
+|#
 
 ;;if
+#|
+(if (> 1783 813) "Correct" "Wrong")
+(if (> 1783 813)
+(progn
+(incf count)
+"You are right!"))
+|#
 
 ;;iteration
+#|
+(dotimes (i 100) (print i))
+(dolist (x `(1783 813 2258)) (print x))
+|#
